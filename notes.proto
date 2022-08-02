@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+service NoteService {
+    rpc Calculadora (Valores) returns (Numero) {}
+}
+
+message Numero {
+    float valor = 1;
+    bool erro = 2;
+}
+
+message Valores {
+    string texto = 1;
+}
