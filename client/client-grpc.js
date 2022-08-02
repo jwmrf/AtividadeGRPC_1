@@ -1,8 +1,8 @@
 const grpc = require('grpc')
 const PROTO_PATH = '../notes.proto'
-const NoteService = grpc.load(PROTO_PATH).NoteService
+const CalcService = grpc.load(PROTO_PATH).CalcService
 
-const client = new NoteService('localhost:3000',
+const client = new CalcService('localhost:3000',
     grpc.credentials.createInsecure())
     
 module.exports = client

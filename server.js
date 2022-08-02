@@ -27,10 +27,10 @@ function Calcula(call, callback) {
     callback(null, calculadoraAvancada(call.request));
 }
 
-server.addService(notesProto.NoteService.service, {
+server.addService(notesProto.CalcService.service, {
     Calculadora:Calcula,
 })
 
 server.bind('127.0.0.1:3000', grpc.ServerCredentials.createInsecure())
-console.log('Server running at http://127.0.0.1:3000')
+console.log('Servidor rodando em: http://127.0.0.1:3000')
 server.start()

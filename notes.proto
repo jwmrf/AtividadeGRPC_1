@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-service NoteService {
+service CalcService {
     rpc Calculadora (Valores) returns (Numero) {}
 }
 
